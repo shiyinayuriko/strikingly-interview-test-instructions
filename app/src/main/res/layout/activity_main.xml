@@ -12,7 +12,16 @@
 
     <net.whitecomet.hangman.view.StartView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"/>
 
-    </net.whitecomet.hangman.view.StartView>
+    <net.whitecomet.hangman.view.GuessView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <net.whitecomet.hangman.view.ResultView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
 </RelativeLayout>

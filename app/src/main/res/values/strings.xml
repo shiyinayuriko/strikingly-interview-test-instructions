@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Hangman</string>
+    <string name="start_view_title">Hangman</string>
+    <string name="start_game_button">Hangman</string>
+
+    <string name="result_view_submit_button">Submit</string>
+    <string name="result_view_resume_button">Resume</string>
+    <string name="result_view_exit_button">Exit</string>
+
 </resources>

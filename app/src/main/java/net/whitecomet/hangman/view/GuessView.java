@@ -11,11 +11,11 @@ import net.whitecomet.hangman.R;
  * Created by white on 2017/2/10.
  */
 
-public class StartView extends RelativeLayout {
-    private static final String TAG = StartView.class.getSimpleName();
-    public StartView(Context context, AttributeSet attrs) {
+public class GuessView extends RelativeLayout {
+    private static final String TAG = GuessView.class.getSimpleName();
+    public GuessView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        LayoutInflater.from(context).inflate(R.layout.layout_start, this, true);
+        LayoutInflater.from(context).inflate(R.layout.layout_guess, this, true);
     }
 
 }

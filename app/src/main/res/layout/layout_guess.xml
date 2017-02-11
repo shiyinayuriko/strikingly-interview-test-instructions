@@ -2,13 +2,19 @@
 <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
     <TextView
-        android:id="@+id/start_view_title"
+        android:id="@+id/guess_view_current_word"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/start_view_title"/>
+        android:text="word"/>
+    <TextView
+        android:id="@+id/guess_view_current_states"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/guess_view_current_word"
+        android:text="states"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/start_view_title"
+        android:layout_below="@id/guess_view_current_states"
         android:text="@string/start_game_button" />
 </RelativeLayout>
