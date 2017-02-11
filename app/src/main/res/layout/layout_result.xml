@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/view_layout_base_margin"
+        android:layout_marginEnd="@dimen/view_layout_base_margin"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingBottom="100dp">
+
+    <TextView
+            android:id="@+id/result_view_score_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="30pt"/>
+
+        <RelativeLayout
+            android:id="@+id/result_view_status_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/result_view_score_text_view"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/result_view_answered_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:paddingEnd="5dp"
+                android:text="@string/result_view_status_title_answered"/>
+
+            <TextView
+                android:id="@+id/result_view_answered_text"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"/>
+            <com.beardedhen.androidbootstrap.BootstrapProgressBar
+                android:id="@+id/result_view_word_count_progress"
+                android:layout_toEndOf="@id/result_view_answered_title"
+                android:layout_toStartOf="@id/result_view_answered_text"
+                android:layout_alignTop="@id/result_view_answered_title"
+                android:layout_alignBottom="@id/result_view_answered_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:bootstrapBrand="success"
+                app:roundedCorners="true"
+                app:bootstrapProgress="40"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/result_view_other_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/result_view_status_layout"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"/>
+
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_below="@id/result_view_other_status"
+            android:orientation="horizontal"
+            android:divider="@drawable/divider"
+            android:showDividers="middle"
+            android:layout_marginTop="10dp">
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/result_view_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/result_view_submit_button"
+                android:onClick="submitResult"
+                app:bootstrapSize="lg"
+                app:bootstrapBrand="warning"
+                app:roundedCorners="true"
+                app:showOutline="true"/>
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/result_view_resume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/result_view_resume_button"
+                android:onClick="resumeGame"
+                app:bootstrapSize="lg"
+                app:bootstrapBrand="info"
+                app:roundedCorners="true"
+                app:showOutline="true"/>
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/result_view_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/result_view_exit_button"
+                android:onClick="exitGame"
+                app:bootstrapSize="lg"
+                app:bootstrapBrand="danger"
+                app:roundedCorners="true"
+                app:showOutline="true"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingBottom="100dp">
+
+
+    <TextView
+            android:id="@+id/start_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32pt"
+            android:text="@string/start_view_title"/>
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/start_view_start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/start_view_title"
+            android:layout_alignStart="@id/start_view_title"
+            android:layout_alignEnd="@id/start_view_title"
+            android:layout_marginTop="15dp"
+            android:text="@string/start_game_button"
+            android:onClick="startGame"
+            app:bootstrapSize="lg"
+            app:bootstrapBrand="primary"
+            app:roundedCorners="true"
+            app:showOutline="true"/>
+    </RelativeLayout>
+</RelativeLayout>
