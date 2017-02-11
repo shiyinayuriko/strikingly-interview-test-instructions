@@ -11,6 +11,7 @@ fork from ["strikingly/strikingly-interview-test-instructions"][1]
 
 
  TODO list
+ - ~~创建github release 100%~~
  - Log 追加可维可测性
  - Monkey测试（稳定性）
  - 单元测试用例补充   5%
