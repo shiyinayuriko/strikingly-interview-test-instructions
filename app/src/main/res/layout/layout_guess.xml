@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:textSize="30pt"/>
+            android:textSize="26pt"/>
         <RelativeLayout
             android:id="@+id/guess_view_status_layout"
             android:layout_width="wrap_content"
@@ -70,8 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:bootstrapBrand="success"
-                    app:roundedCorners="true"
-                    app:bootstrapProgress="40"/>
+                    app:roundedCorners="true"/>
                 <com.beardedhen.androidbootstrap.BootstrapProgressBar
                     android:id="@+id/guess_view_wrong_count_progress"
                     android:layout_width="wrap_content"
@@ -79,7 +78,6 @@
                     android:layout_weight="1"
                     app:bootstrapBrand="danger"
                     app:roundedCorners="true"
-                    app:bootstrapProgress="85"
                     android:layout_alignParentStart="true"/>
             </LinearLayout>
 
@@ -116,13 +114,10 @@
         </LinearLayout>
 
     </RelativeLayout>
-
-    <Button
-        android:id="@+id/guess_view_guess_button"
-        android:layout_width="wrap_content"
+    <include
+        android:id="@+id/guess_view_guess_keys"
+        layout="@layout/layout_keyboard"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="guess"
-        android:onClick="guessWord"/>
-
+        android:layout_alignParentBottom="true" />
 </RelativeLayout>

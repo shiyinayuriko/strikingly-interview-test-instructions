@@ -4,7 +4,7 @@
     <string name="start_game_button">Start</string>
 
     <string name="guess_view_check_result_button">check result</string>
-    <string name="guess_view_skip_button">skip</string>
+    <string name="guess_view_skip_button">next</string>
     <string name="guess_view_status_title_answered">Answered:</string>
     <string name="guess_view_status_title_wrong">Wrong:</string>
 

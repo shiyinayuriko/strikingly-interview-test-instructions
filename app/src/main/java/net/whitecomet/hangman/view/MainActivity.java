@@ -43,8 +43,11 @@ public class MainActivity extends Activity implements HangmanStateMachine.ViewSh
     }
     public void guessWord(View v){
         WLog.i(TAG, "click guessWord");
-        guessView.disableStartButton();
-        sm.guessWord("a");
+        if(v instanceof GuessKey){
+            String ch = ((GuessKey) v).getLetter();
+            guessView.disableStartButton();
+            sm.guessWord(ch);
+        }
     }
     public void checkResult(View v){
         WLog.i(TAG, "click checkResult");
