@@ -24,23 +24,23 @@ import net.whitecomet.hangman.util.WLog;
 public class HangmanStateMachine extends StateMachine {
     private static final String TAG = HangmanStateMachine.class.getSimpleName();
 
-    public static final int EVENT_MSG_START_GAME = 1;
-    public static final int EVENT_MSG_GUESS_WORD = 2;
-    public static final int EVENT_MSG_CHECK_RESULT = 3;
-    public static final int EVENT_MSG_SKIP_WORD = 6;
-    public static final int EVENT_MSG_SUBMIT_RESULT = 4;
-    public static final int EVENT_MSG_EXIT = 5;
+    private static final int EVENT_MSG_START_GAME = 1;
+    private static final int EVENT_MSG_GUESS_WORD = 2;
+    private static final int EVENT_MSG_CHECK_RESULT = 3;
+    private static final int EVENT_MSG_SKIP_WORD = 6;
+    private static final int EVENT_MSG_SUBMIT_RESULT = 4;
+    private static final int EVENT_MSG_EXIT = 5;
 
-    public static final int NETWORK_START_GAME_READY = 101;
-    public static final int NETWORK_START_GAME_FAIL = 201;
-    public static final int NETWORK_NEXT_WORD_READY = 102;
-    public static final int NETWORK_NEXT_WORD_FAIL = 202;
-    public static final int NETWORK_GUESS_WORD_READY = 103;
-    public static final int NETWORK_GUESS_WORD_FAIL = 203;
-    public static final int NETWORK_GET_RESULT_READY = 104;
-    public static final int NETWORK_GET_RESULT_FAIL = 204;
-    public static final int NETWORK_SUBMIT_RESULT_READY = 105;
-    public static final int NETWORK_SUBMIT_RESULT_FAIL = 205;
+    private static final int NETWORK_START_GAME_READY = 101;
+    private static final int NETWORK_START_GAME_FAIL = 201;
+    private static final int NETWORK_NEXT_WORD_READY = 102;
+    private static final int NETWORK_NEXT_WORD_FAIL = 202;
+    private static final int NETWORK_GUESS_WORD_READY = 103;
+    private static final int NETWORK_GUESS_WORD_FAIL = 203;
+    private static final int NETWORK_GET_RESULT_READY = 104;
+    private static final int NETWORK_GET_RESULT_FAIL = 204;
+    private static final int NETWORK_SUBMIT_RESULT_READY = 105;
+    private static final int NETWORK_SUBMIT_RESULT_FAIL = 205;
 
     private ViewShower viewShower;
     private Network network;
