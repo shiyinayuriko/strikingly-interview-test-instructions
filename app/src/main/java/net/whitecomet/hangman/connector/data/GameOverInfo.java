@@ -5,16 +5,17 @@ package net.whitecomet.hangman.connector.data;
  */
 
 public class GameOverInfo {
-    String playerId;
-    String sessionId;
-    int totalWordCount;
-    int correctWordCount;
-    int totalWrongGuessCount;
-    int score;
-    String datetime;
+    public String playerId;
+    public String sessionId;
+    public int totalWordCount;
+    public int correctWordCount;
+    public int totalWrongGuessCount;
+    public int score;
+    public String datetime;
 
     @Override
     public String toString() {
+        //TODO
         return "score";
     }
 }
