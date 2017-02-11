@@ -5,6 +5,8 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 
 import com.beardedhen.androidbootstrap.BootstrapButton;
+import com.beardedhen.androidbootstrap.api.attributes.BootstrapBrand;
+import com.beardedhen.androidbootstrap.api.defaults.DefaultBootstrapBrand;
 
 import net.whitecomet.hangman.R;
 
@@ -34,6 +36,10 @@ public class GuessKey extends BootstrapButton{
             TypedArray typeArray = context.obtainStyledAttributes(attrs, R.styleable.GuessKey);
             letter = typeArray.getString(R.styleable.GuessKey_letter);
         }
+        setShowOutline(true);
+        setBootstrapBrand(DefaultBootstrapBrand.REGULAR);
+        setRounded(true);
+
     }
 
     @Override

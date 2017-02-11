@@ -10,7 +10,8 @@
         android:layout_marginStart="@dimen/view_layout_base_margin"
         android:layout_marginEnd="@dimen/view_layout_base_margin"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true">
+        android:layout_centerVertical="true"
+        android:paddingBottom="100dp">
         <TextView
             android:id="@+id/guess_view_current_word"
             android:layout_width="wrap_content"
@@ -21,13 +22,17 @@
             android:id="@+id/guess_view_status_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/guess_view_current_word">
+            android:layout_below="@id/guess_view_current_word"
+            android:layout_marginTop="5dp">
 
             <LinearLayout
                 android:id="@+id/guess_view_status_title_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
+                android:paddingEnd="5dp"
+                android:divider="@drawable/divider"
+                android:showDividers="middle"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
@@ -39,11 +44,15 @@
                     android:text="@string/guess_view_status_title_wrong"/>
             </LinearLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:id="@+id/guess_view_status_text_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true">
+                android:layout_alignParentEnd="true"
+                android:paddingStart="5dp"
+                android:divider="@drawable/divider"
+                android:showDividers="middle"
+                android:orientation="vertical">
                 <TextView
                     android:id="@+id/guess_view_word_count_text"
                     android:layout_width="wrap_content"
@@ -51,9 +60,8 @@
                 <TextView
                     android:id="@+id/guess_view_wrong_count_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/guess_view_word_count_text"/>
-            </RelativeLayout>
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -62,6 +70,8 @@
                 android:layout_toStartOf="@id/guess_view_status_text_layout"
                 android:layout_alignTop="@id/guess_view_status_text_layout"
                 android:layout_alignBottom="@id/guess_view_status_text_layout"
+                android:divider="@drawable/divider"
+                android:showDividers="middle"
                 android:orientation="vertical">
 
                 <com.beardedhen.androidbootstrap.BootstrapProgressBar
@@ -88,6 +98,9 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_below="@id/guess_view_status_layout"
+            android:layout_marginTop="10dp"
+            android:divider="@drawable/divider"
+            android:showDividers="middle"
             android:orientation="horizontal">
             <com.beardedhen.androidbootstrap.BootstrapButton
                 android:id="@+id/guess_view_get_result_button"
@@ -108,7 +121,7 @@
                 android:text="@string/guess_view_skip_button"
                 android:onClick="skipWord"
                 app:bootstrapSize="lg"
-                app:bootstrapBrand="success"
+                app:bootstrapBrand="warning"
                 app:roundedCorners="true"
                 app:showOutline="true"/>
         </LinearLayout>

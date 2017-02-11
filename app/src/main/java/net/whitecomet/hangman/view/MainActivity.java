@@ -78,7 +78,7 @@ public class MainActivity extends Activity implements HangmanStateMachine.ViewSh
         viewHandler.post(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(MainActivity.this, fail,Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, fail,Toast.LENGTH_SHORT).show();
             }
         });
     }

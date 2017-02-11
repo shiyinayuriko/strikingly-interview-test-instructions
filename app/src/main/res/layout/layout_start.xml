@@ -9,13 +9,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true">
+        android:layout_centerVertical="true"
+        android:paddingBottom="100dp">
 
-        <TextView
+
+    <TextView
             android:id="@+id/start_view_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30pt"
+            android:textSize="32pt"
             android:text="@string/start_view_title"/>
 
         <com.beardedhen.androidbootstrap.BootstrapButton
@@ -25,10 +27,11 @@
             android:layout_below="@id/start_view_title"
             android:layout_alignStart="@id/start_view_title"
             android:layout_alignEnd="@id/start_view_title"
+            android:layout_marginTop="15dp"
             android:text="@string/start_game_button"
             android:onClick="startGame"
             app:bootstrapSize="lg"
-            app:bootstrapBrand="success"
+            app:bootstrapBrand="primary"
             app:roundedCorners="true"
             app:showOutline="true"/>
     </RelativeLayout>
