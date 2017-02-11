@@ -11,17 +11,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/result_view_status"
-        android:text="@string/result_view_submit_button"/>
+        android:text="@string/result_view_submit_button"
+        android:onClick="submitResult"/>
     <Button
         android:id="@+id/result_view_resume"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/result_view_submit"
-        android:text="@string/result_view_resume_button"/>
+        android:text="@string/result_view_resume_button"
+        android:onClick="resumeGame"/>
     <Button
         android:id="@+id/result_view_exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/result_view_resume"
-        android:text="@string/result_view_exit_button"/>
+        android:text="@string/result_view_exit_button"
+        android:onClick="exitGame"/>
 </RelativeLayout>

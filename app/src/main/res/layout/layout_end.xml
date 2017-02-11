@@ -2,15 +2,16 @@
 <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
     <TextView
-        android:id="@+id/start_view_title"
+        android:id="@+id/end_view_status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/start_view_title"/>
+        android:text="status"/>
+
     <Button
-        android:id="@+id/start_view_start_button"
+        android:id="@+id/end_view_exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/start_view_title"
-        android:text="@string/start_game_button"
-        android:onClick="startGame"/>
+        android:layout_below="@id/end_view_status"
+        android:text="@string/end_view_exit_button"
+        android:onClick="exitGame"/>
 </RelativeLayout>

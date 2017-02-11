@@ -8,5 +8,5 @@ import net.whitecomet.hangman.connector.data.WordInfo;
  */
 
 public interface GetResultCallback extends BaseFailCallback{
-    void onSucess(ResultInfo info);
+    void onSuccess(ResultInfo info);
 }

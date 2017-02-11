@@ -13,8 +13,25 @@
         android:layout_below="@id/guess_view_current_word"
         android:text="states"/>
     <Button
+        android:id="@+id/guess_view_guess_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/guess_view_current_states"
-        android:text="@string/start_game_button" />
+        android:text="guess"
+        android:onClick="guessWord"/>
+    <Button
+        android:id="@+id/guess_view_get_result_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/guess_view_guess_button"
+        android:text="@string/guess_view_check_result_button"
+        android:onClick="checkResult"/>
+    <Button
+        android:id="@+id/guess_view_skip_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/guess_view_get_result_button"
+        android:text="@string/guess_view_skip_button"
+        android:onClick="skipWord"/>
+
 </RelativeLayout>

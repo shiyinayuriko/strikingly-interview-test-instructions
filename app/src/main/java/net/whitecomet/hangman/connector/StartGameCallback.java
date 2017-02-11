@@ -7,5 +7,5 @@ import net.whitecomet.hangman.connector.data.GameInfo;
  */
 
 public interface StartGameCallback extends BaseFailCallback{
-    void onSucess(GameInfo info);
+    void onSuccess(GameInfo info);
 }

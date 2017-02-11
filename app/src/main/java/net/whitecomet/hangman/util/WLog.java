@@ -13,4 +13,7 @@ public class WLog {
     public static int d(String tag,String msg){
         return Log.d(tag, msg);
     }
+    public static int w(String tag,String msg){
+        return Log.w(tag, msg);
+    }
 }

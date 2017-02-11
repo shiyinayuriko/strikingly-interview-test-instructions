@@ -11,17 +11,25 @@
     tools:context="net.whitecomet.hangman.view.MainActivity">
 
     <net.whitecomet.hangman.view.StartView
+        android:id="@+id/layout_start_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
     <net.whitecomet.hangman.view.GuessView
+        android:id="@+id/layout_guess_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
 
     <net.whitecomet.hangman.view.ResultView
+        android:id="@+id/layout_result_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
 
+    <net.whitecomet.hangman.view.GameEndView
+        android:id="@+id/layout_end_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
 </RelativeLayout>

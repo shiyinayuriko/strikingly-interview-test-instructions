@@ -7,5 +7,5 @@ import net.whitecomet.hangman.connector.BaseFailCallback;
  */
 
 public interface SubmitResultCallback extends BaseFailCallback{
-    void onSucess(GameOverInfo info);
+    void onSuccess(GameOverInfo info);
 }

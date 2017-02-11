@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.internal.util;
+package com.android.internal.util.stub;
 
 import android.os.Message;
 
@@ -32,21 +32,21 @@ public class State implements IState {
     }
 
     /* (non-Javadoc)
-     * @see com.android.internal.util.IState#enter()
+     * @see com.android.internal.util.stub.IState#enter()
      */
     @Override
     public void enter() {
     }
 
     /* (non-Javadoc)
-     * @see com.android.internal.util.IState#exit()
+     * @see com.android.internal.util.stub.IState#exit()
      */
     @Override
     public void exit() {
     }
 
     /* (non-Javadoc)
-     * @see com.android.internal.util.IState#processMessage(android.os.Message)
+     * @see com.android.internal.util.stub.IState#processMessage(android.os.Message)
      */
     @Override
     public boolean processMessage(Message msg) {
@@ -63,7 +63,7 @@ public class State implements IState {
      * want to provide a setName or some other mechanism for setting
      * another name if the class name is not appropriate.
      *
-     * @see com.android.internal.util.IState#processMessage(Message)
+     * @see IState#processMessage(Message)
      */
     @Override
     public String getName() {

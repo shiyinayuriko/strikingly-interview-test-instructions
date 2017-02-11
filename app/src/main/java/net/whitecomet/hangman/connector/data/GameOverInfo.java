@@ -12,4 +12,9 @@ public class GameOverInfo {
     int totalWrongGuessCount;
     int score;
     String datetime;
+
+    @Override
+    public String toString() {
+        return "score";
+    }
 }

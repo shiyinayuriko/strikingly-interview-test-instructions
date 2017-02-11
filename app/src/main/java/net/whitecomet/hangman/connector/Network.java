@@ -2,8 +2,7 @@ package net.whitecomet.hangman.connector;
 
 import com.google.gson.Gson;
 
-import net.whitecomet.hangman.connector.data.GameOverInfo;
-import net.whitecomet.hangman.connector.data.GetResultReponse;
+import net.whitecomet.hangman.connector.data.GetResultResponse;
 import net.whitecomet.hangman.connector.data.StartGameResponse;
 import net.whitecomet.hangman.connector.data.SubmitResultCallback;
 import net.whitecomet.hangman.connector.data.SubmitResultResponse;
@@ -29,7 +28,7 @@ import okhttp3.Response;
 public class Network {
     private static final String TAG = Network.class.getSimpleName();
     //FIXME
-    private static final String PLAYER_ID = "whitecometliliwill@gmail.coms";
+    private static final String PLAYER_ID = "whitecometliliwill@gmail.com";
     private static final String URL = "https://strikingly-hangman.herokuapp.com/game/on";
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 
@@ -52,7 +51,7 @@ public class Network {
                 try{
                     StartGameResponse res = gson.fromJson(json, StartGameResponse.class);
                     sessionId = res.sessionId;
-                    callback.onSucess(res.data);
+                    callback.onSuccess(res.data);
                 }catch (Exception e){
                     callback.onFail(e.getMessage());
                 }
@@ -78,7 +77,7 @@ public class Network {
 
                 try{
                     WordResponse res = gson.fromJson(json, WordResponse.class);
-                    callback.onSucess(res.data);
+                    callback.onSuccess(res.data);
                 }catch (Exception e){
                     callback.onFail(e.getMessage());
                 }
@@ -95,7 +94,7 @@ public class Network {
         Map<String,String> para = new HashMap<>();
         para.put("sessionId",sessionId);
         para.put("action","guessWord");
-        para.put("guess","ch");
+        para.put("guess",ch.toUpperCase());
         String jsonStr = gson.toJson(para);
         post(jsonStr, new PostCallback() {
 
@@ -105,7 +104,7 @@ public class Network {
 
                 try{
                     WordResponse res = gson.fromJson(json, WordResponse.class);
-                    callback.onSucess(res.data);
+                    callback.onSuccess(res.data);
                 }catch (Exception e){
                     callback.onFail(e.getMessage());
                 }
@@ -129,8 +128,8 @@ public class Network {
                 WLog.i(TAG, "getResult.onSuccess: " + json);
 
                 try{
-                    GetResultReponse res = gson.fromJson(json, GetResultReponse.class);
-                    callback.onSucess(res.data);
+                    GetResultResponse res = gson.fromJson(json, GetResultResponse.class);
+                    callback.onSuccess(res.data);
                 }catch (Exception e){
                     callback.onFail(e.getMessage());
                 }
@@ -155,7 +154,7 @@ public class Network {
 
                 try{
                     SubmitResultResponse res = gson.fromJson(json, SubmitResultResponse.class);
-                    callback.onSucess(res.data);
+                    callback.onSuccess(res.data);
                 }catch (Exception e){
                     callback.onFail(e.getMessage());
                 }

@@ -10,6 +10,6 @@ public class GameInfo {
 
     @Override
     public String toString() {
-        return "{numberOfWordsToGuess:" + numberOfWordsToGuess + ", numberOfGuessAllowedForEachWord:" + numberOfGuessAllowedForEachWord + "}";
+        return "{totalWords:" + numberOfWordsToGuess + ", canWrongs:" + numberOfGuessAllowedForEachWord + "}";
     }
 }

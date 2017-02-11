@@ -34,7 +34,7 @@ public class NetworkTest {
         network.startGame(new StartGameCallback() {
 
             @Override
-            public void onSucess(GameInfo info) {
+            public void onSuccess(GameInfo info) {
                 WLog.d(TAG, info.numberOfGuessAllowedForEachWord +"");
             }
 
@@ -56,7 +56,7 @@ public class NetworkTest {
         network.nextWord(new WordCallback(){
 
             @Override
-            public void onSucess(WordInfo info) {
+            public void onSuccess(WordInfo info) {
                 WLog.d(TAG, info.word +"");
             }
 
@@ -78,7 +78,7 @@ public class NetworkTest {
         network.guessWord("e", new WordCallback(){
 
             @Override
-            public void onSucess(WordInfo info) {
+            public void onSuccess(WordInfo info) {
                 WLog.d(TAG, info.word +"");
             }
 

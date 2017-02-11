@@ -9,4 +9,10 @@ public class ResultInfo {
     public int correctWordCount;
     public int totalWrongGuessCount;
     public int score;
+
+    @Override
+    public String toString() {
+        String f = "{total:%d, correct:%d, wrong: %d, score: %d}";
+        return String.format(f,totalWordCount, correctWordCount, totalWrongGuessCount, score);
+    }
 }
